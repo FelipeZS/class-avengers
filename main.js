@@ -25,8 +25,11 @@ class Vingador extends Pessoa {
     this.isImortal = isImortal;
   }
 
-  lutar() {
+  thorlutar() {
     alert(`${this.nome} está lutando usando ${this.poderes[1]}`);
+  }
+  ironmanlutar() {
+    alert(`${this.nome} está lutando usando sua armadura`);
   }
 }
 
@@ -37,9 +40,24 @@ const thor = new Vingador(
   ["Deus do Trovão", "Super força", "Vôo", "Longevidade"],
   true,
   true,
+  true,
   false
 );
 
-document.getElementById("lutar").onclick = function () {
-  thor.lutar();
+const ironman = new Vingador(
+  "Iron Man",
+  "1.77",
+  "80kg",
+  ["Sem poderes"],
+  true,
+  true,
+  true,
+  false
+);
+
+document.getElementById("thorlutar").onclick = function () {
+  thor.thorlutar();
+};
+document.getElementById("ironManlutar").onclick = function () {
+  ironman.ironmanlutar();
 };

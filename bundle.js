@@ -50,17 +50,27 @@ var Vingador = /*#__PURE__*/function (_Pessoa) {
   }
 
   _createClass(Vingador, [{
-    key: "lutar",
-    value: function lutar() {
+    key: "thorlutar",
+    value: function thorlutar() {
       alert("".concat(this.nome, " est\xE1 lutando usando ").concat(this.poderes[1]));
+    }
+  }, {
+    key: "ironmanlutar",
+    value: function ironmanlutar() {
+      alert("".concat(this.nome, " est\xE1 lutando usando sua armadura"));
     }
   }]);
 
   return Vingador;
 }(Pessoa);
 
-var thor = new Vingador("Thor", "1.85", "100kg", ["Deus do Trovão", "Super força", "Vôo", "Longevidade"], true, true, false);
+var thor = new Vingador("Thor", "1.85", "100kg", ["Deus do Trovão", "Super força", "Vôo", "Longevidade"], true, true, true, false);
+var ironman = new Vingador("Iron Man", "1.77", "80kg", ["Sem poderes"], true, true, true, false);
 
-document.getElementById("lutar").onclick = function () {
-  thor.lutar();
+document.getElementById("thorlutar").onclick = function () {
+  thor.thorlutar();
+};
+
+document.getElementById("ironManlutar").onclick = function () {
+  ironman.ironmanlutar();
 };
